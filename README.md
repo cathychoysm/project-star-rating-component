@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Front-End Project - Star Rating Component
+This project is a frontend challenge from FrontendPro.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Language: TypeScript
 
-## Available Scripts
+- Framework: React.js
 
-In the project directory, you can run:
+- Library: Tailwind CSS
 
-### `yarn start`
+The details of this challenge are as below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Challenge link: https://www.frontendpro.dev/frontend-coding-challenges/star-rating-component-geShE1ApkqUoNCqujxOd
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Star Rating Component](./design/Rating-5.png)
 
-### `yarn test`
+**Challenge Title**
+Star Rating Component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Challenge Description**
+In this frontend challenge, you'll build a Star Rating Component. This challenge is perfect for you if you're interested in building front-end web components and taking your front-end skills to the next level!
 
-### `yarn build`
+**Difficulty Level**
+Intermediate
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Tags**
+FRONTEND
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Learning**
+In this frontend challenge, you'll learn how to build a real-world UI component using JavaScript or ReactJs. You'll also learn how to use CSS Flexbox to lay out the component and make it responsive. This frontend challenge is a great opportunity to improve your JavaScript & ReactJs skills by building a frontend web component. You're going to love it!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Requirements**
 
-### `yarn eject`
+- The Star Rating component should display a set of stars that can be clicked or hovered over to select a rating.
+- The component should be customizable, with an option to change the number of stars to be displayed.
+- When the user clicks on a star to select a rating, the rating should be updated, and a corresponding message should be displayed.
+- The component should ensure that hovering over the third star after selecting the fourth star highlights only the first, second and third stars.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Bonus Requirements**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The component should allow users to select half-ratings (e.g., 4.5 stars).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Text**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. 5-star rating: Excellent! We're thrilled to hear you had such a positive experience. Thank you for choosing our product/service.
+2. 4-star rating: Thank you for your positive feedback! We're glad to know that you had a great experience and we appreciate your support.
+3. 3-star rating: Thank you for your feedback. We're sorry to hear that your experience wasn't perfect. We would love to hear more about your concerns to see how we can improve.
+4. 2-star rating: We apologize for the inconvenience you experienced. We appreciate your feedback and would like to work with you to address any issues.
+5. 1-star rating: We're sorry to hear that you had a bad experience. We would like to learn more about what happened and how we can make things right.
 
-## Learn More
+I hope you'll enjoy building this challenge.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to share your solution on the website or on social media and [tag us](https://twitter.com/FrontendProHQ).
