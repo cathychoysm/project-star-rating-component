@@ -11,7 +11,7 @@ The details of this challenge are as below:
 
 Challenge link: https://www.frontendpro.dev/frontend-coding-challenges/star-rating-component-geShE1ApkqUoNCqujxOd
 
-![Star Rating Component](./design/Rating-5.png)
+![Star Rating Component](./Rating-5.png)
 
 **Challenge Title**
 Star Rating Component
