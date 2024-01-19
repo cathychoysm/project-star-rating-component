@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-
+import Star from './Star';
 
 function App() {
-	const stars = [...Array(5)].map(() => {
+	const [ rating, setRating ] = useState<number>(0);
+	const [ hover, setHover ] = useState<number>(0);
+
+	const stars = [...Array(5)].map((star, index: number) => {
 		return (
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="min-w-[20px] min-h-[20px] max-w-[88px] max-h-[88px] text-star-yellow">
-				<path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
-			</svg>
+			<button
+				type="button" key={ index } value={ index }
+				onClick={ () => setRating(index) }
+				onMouseEnter={ () => setHover(index) }
+				onMouseLeave={ () => setHover(rating) }
+				className="w-full h-full">
+				<Star color={index <= (hover || rating)? "star-yellow": "star-gray"}/>
+			</button>
 		);
 	});
 
-	interface Message {
-		one: string;
-		two: string;
-		three: string;
-		four: string;
-		five: string;
-	}
-	const message: Message = {
-		one: "We're sorry to hear that you had a bad experience. We would like to learn more about what happened and how we can make things right.",
-		two: "We apologize for the inconvenience you experienced. We appreciate your feedback and would like to work with you to address any issues.",
-		three: "Thank you for your feedback. We're sorry to hear that your experience wasn't perfect. We would love to hear more about your concerns to see how we can improve.",
-		four: "Thank you for your positive feedback! We're glad to know that you had a great experience and we appreciate your support.",
-		five: "Excellent! We're thrilled to hear you had such a positive experience. Thank you for choosing our platform.",
-	};
+	type Message = [string, string, string, string, string]
+	const message: Message = [
+		"We're sorry to hear that you had a bad experience. We would like to learn more about what happened and how we can make things right.",
+		"We apologize for the inconvenience you experienced. We appreciate your feedback and would like to work with you to address any issues.",
+		"Thank you for your feedback. We're sorry to hear that your experience wasn't perfect. We would love to hear more about your concerns to see how we can improve.",
+		"Thank you for your positive feedback! We're glad to know that you had a great experience and we appreciate your support.",
+		"Excellent! We're thrilled to hear you had such a positive experience. Thank you for choosing our platform."
+	];
 
 	return (
     	<div className="
@@ -42,7 +44,7 @@ function App() {
 						<div className="py-4 desktop:py-8 flex place-content-between w-9/12 desktop:w-[548px]">
 							{ stars }
 						</div>
-						<p className="text-center font-p text-sm desktop:text-lg text-text-gray max-w-[647px]">{message.five}</p>
+						<p className="text-center font-p text-sm desktop:text-lg text-text-gray max-w-[647px]">{message[hover]}</p>
 				</div>
 		</div>
   );
