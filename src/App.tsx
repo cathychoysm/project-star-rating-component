@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import Star from './Star';
+import { Star } from './Star';
 
 function App() {
 	const [ rating, setRating ] = useState<number>(0);
@@ -14,7 +14,7 @@ function App() {
 				onMouseEnter={ () => setHover(index) }
 				onMouseLeave={ () => setHover(rating) }
 				className="w-full h-full">
-				<Star color={index <= (hover || rating)? "star-yellow": "star-gray"}/>
+				<Star color={index <= (hover || rating)? "text-star-yellow": "text-star-gray"}/>
 			</button>
 		);
 	});
